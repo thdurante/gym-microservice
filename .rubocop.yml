@@ -1,0 +1,34 @@
+---
+AllCops:
+  TargetRubyVersion: 2.4.2
+  Exclude:
+    - vendor/**/*
+    - log/**/*
+    - db/schema.rb
+    - bin/*
+    - config/**/*
+
+Rails:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*
+
+BlockLength:
+  Max: 70
+  Exclude:
+   - spec/**/*
