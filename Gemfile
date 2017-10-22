@@ -26,5 +26,8 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', '0.14.1', require: false
+  gem 'database_cleaner', '1.6.1'
+  gem 'faker',            '1.8.4'
+  gem 'shoulda-matchers', '3.1.2'
+  gem 'simplecov',        '0.14.1', require: false
 end
