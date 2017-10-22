@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022212247) do
+ActiveRecord::Schema.define(version: 20171022213709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,4 +32,14 @@ ActiveRecord::Schema.define(version: 20171022212247) do
     t.index ["registry_number"], name: "index_people_on_registry_number", unique: true
   end
 
+  create_table "training_sessions", force: :cascade do |t|
+    t.string "name"
+    t.string "frequency"
+    t.bigint "gym_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gym_id"], name: "index_training_sessions_on_gym_id"
+  end
+
+  add_foreign_key "training_sessions", "gyms"
 end
