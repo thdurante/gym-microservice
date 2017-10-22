@@ -8,6 +8,7 @@ gem 'pg',             '0.18.4'
 gem 'puma',           '3.10.0'
 gem 'rails',          '5.1.4'
 gem 'sass-rails',     '5.0.6'
+gem 'simple_form',    '3.5.0'
 gem 'uglifier',       '3.2.0'
 
 group :development, :test do
@@ -20,8 +21,6 @@ group :development do
   gem 'better_errors',          '2.1.1'
   gem 'bullet',                 '5.5.1'
   gem 'listen',                 '3.1.5'
-  gem 'spring',                 '2.0.2'
-  gem 'spring-watcher-listen',  '2.0.1'
   gem 'web-console',            '3.5.1'
 end
 
