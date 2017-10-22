@@ -2,11 +2,13 @@ source 'https://rubygems.org'
 
 ruby '2.4.2'
 
-gem 'pg',         '0.18.4'
-gem 'puma',       '3.10.0'
-gem 'rails',      '5.1.4'
-gem 'sass-rails', '5.0.6'
-gem 'uglifier',   '3.2.0'
+gem 'bootstrap-sass', '3.3.7'
+gem 'jquery-rails',   '4.3.1'
+gem 'pg',             '0.18.4'
+gem 'puma',           '3.10.0'
+gem 'rails',          '5.1.4'
+gem 'sass-rails',     '5.0.6'
+gem 'uglifier',       '3.2.0'
 
 group :development, :test do
   gem 'byebug',             '9.1.0'
