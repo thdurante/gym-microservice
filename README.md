@@ -23,3 +23,11 @@ Para rodar o projeto, siga os passos abaixo:
 Na pasta raiz do projeto:
 $ rails s
 ```
+
+## Test
+Para rodar os testes do projeto, siga os passos abaixo:
+```
+Na pasta raiz do projeto:
+$ coverage=on bundle exec rspec
+```
+Em que `coverage=on` é opcional e indica se o relatório de cobertura de testes deve ou não ser gerado.
