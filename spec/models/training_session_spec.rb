@@ -4,6 +4,7 @@ RSpec.describe TrainingSession, type: :model do
   describe 'associations' do
     it { is_expected.to belong_to(:gym) }
     it { is_expected.to have_many(:enrollments).dependent(:nullify) }
+    it { is_expected.to have_many(:people).through(:enrollments) }
   end
 
   describe 'validations' do
