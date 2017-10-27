@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @training_session.name %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @training_session.frequency %>
+</p>
+
+<p>
+  <strong>Gym:</strong>
+  <%= @training_session.gym.name %>
+</p>
+
+<%= link_to 'Edit', edit_training_session_path(@training_session) %> |
+<%= link_to 'Back', training_sessions_path %>
