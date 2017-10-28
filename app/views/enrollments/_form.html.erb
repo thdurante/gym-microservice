@@ -1,0 +1,16 @@
+<%= simple_form_for(@enrollment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.simple_fields_for :person do |p| %>
+      <%= p.input :name %>
+      <%= p.input :birth, as: :date, start_year: Date.today.year - 100, order: [:day, :month, :year] %>
+      <%= p.input :registry_number %>
+    <% end %>
+    <%= f.association :training_session %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
