@@ -21,6 +21,7 @@ class EnrollmentsController < ApplicationController
   # POST /enrollments
   def create
     @enrollment = Enrollment.new(enrollment_params)
+    PersonService.new(@enrollment).fetch_person!
 
     if @enrollment.save
       redirect_to @enrollment, notice: 'Enrollment was successfully created.'
@@ -31,7 +32,10 @@ class EnrollmentsController < ApplicationController
 
   # PATCH/PUT /enrollments/1
   def update
-    if @enrollment.update(enrollment_params)
+    @enrollment.assign_attributes(enrollment_params)
+    PersonService.new(@enrollment).update_person! if @enrollment.valid?
+
+    if @enrollment.save
       redirect_to @enrollment, notice: 'Enrollment was successfully updated.'
     else
       render :edit

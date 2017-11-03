@@ -37,7 +37,11 @@ RSpec.describe EnrollmentsController, type: :controller do
 
   let(:invalid_attributes) do
     {
-      person_attributes: {},
+      person_attributes: {
+        name: '',
+        birth_date: '',
+        registry_number: ''
+      },
       training_session_id: nil
     }
   end
