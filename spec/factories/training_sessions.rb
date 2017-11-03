@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :training_session do
     name 'Treinamento avançado monstrão'
     frequency 'ter/qui'
+    gym
 
     after(:build) do |training_session|
       training_session.gym = build(:gym)
