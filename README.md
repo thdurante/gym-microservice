@@ -11,7 +11,7 @@ O Projeto será executado pelos seguintes alunos:
 Para configurar o projeto, siga os passos abaixo:
 ```
 Na pasta raiz do projeto:
-$ bundle intall
+$ bundle install
 $ rails db:create
 $ rails db:migrate
 ```
